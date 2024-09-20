@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.paddle {
+  --position: 50;
+  background-color: #63072a;
+  position: absolute;
+  left: calc(var(--position) * 1vw);
+  transform: translate(-50%, 0);
+  bottom: 100px;
+  height: 20px;
+  width: 200px;
+  margin: 0;
+}
+
+.ball {
+  --x: 50;
+  --y: 35;
+  position: absolute;
+  left: calc(var(--x) * 1vw);
+  top: calc(var(--y) * 1vh);
+  transform: translate(-50%, -50%);
+  background-color: #63072a;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.score {
+  position: absolute;
+  top: 10px;
+  width: 100px;
+  height: 20px;
+  text-align: center;
+}
+
+#restart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  display: none;
+  border-radius: 7px;
+}
+
+#restart:hover {
+  animation: buttonAnimation 0.2s linear;
+  background-color: #000000;
+  color: white;
+}
+
+@keyframes buttonAnimation {
+  0% {
+    color: black;
+    background-color: white;
+  }
+  100% {
+    color: white;
+    background-color: black;
+  }
+}
